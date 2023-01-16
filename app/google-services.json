@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1067227788842",
+    "project_id": "a3-gamestation",
+    "storage_bucket": "a3-gamestation.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1067227788842:android:3b527ef59413264ddcf553",
+        "android_client_info": {
+          "package_name": "rmit.ad.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1067227788842-c9j1v2nje2elbicusiesho2os5b8coa2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuNqCdfbCHnZqdBsRxim8vhpE1lSoCcpI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1067227788842-c9j1v2nje2elbicusiesho2os5b8coa2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
