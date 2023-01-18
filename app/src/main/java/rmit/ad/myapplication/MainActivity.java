@@ -37,10 +37,8 @@ public class MainActivity extends AppCompatActivity {
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (true) {
+                if (isValidAndLogin()) {
                     Intent loginIntent = new Intent(MainActivity.this, NavigationPage.class);
-////                    String username = (String) et_username.getText().toString();
-////                    loginIntent.putExtra("username", username);
                     startActivityForResult(loginIntent, 300);
                 }
             }
@@ -67,6 +65,8 @@ public class MainActivity extends AppCompatActivity {
 
         String username = (String) et_username.getText().toString();
         String password = (String) et_password.getText().toString();
+
+        // Check database
 
         return true;
     }

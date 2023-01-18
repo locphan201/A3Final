@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".GameLibrary">
+    tools:context=".GameStore">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/gamelib"
+        android:id="@+id/gamelist"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

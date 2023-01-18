@@ -47,7 +47,7 @@ public class NavigationPage extends AppCompatActivity {
                         loadFragment(new GameLibrary());
                         break;
                     case R.id.nav_item2:
-                        loadFragment(new Fragment());
+                        loadFragment(new GameStore());
                         break;
                     case R.id.nav_item3:
 //                        loadFragment(new Fragment());

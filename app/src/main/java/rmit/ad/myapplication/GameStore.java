@@ -13,20 +13,19 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GameLibrary extends Fragment {
+public class GameStore extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.activity_game_library, container, false);
+        View view = inflater.inflate(R.layout.activity_game_store, container, false);
 
-        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) RecyclerView gameList = view.findViewById(R.id.gamelib);
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) RecyclerView gameList = view.findViewById(R.id.gamelist);
         gameList.setLayoutManager(new LinearLayoutManager(getContext()));
 
         List<Game> games = new ArrayList<>();
         // populate the games list with data
-        games.add(new Game("Grand Theft Auto V", "Rockstar"));
 
-        GameLibAdapter adapter = new GameLibAdapter(games, getContext());
+        GameStoreAdapter adapter = new GameStoreAdapter(games, getContext());
         gameList.setAdapter(adapter);
 
         return view;
