@@ -33,9 +33,7 @@ public class GameStoreAdapter extends RecyclerView.Adapter<GameStoreAdapter.View
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Game game = games.get(position);
         holder.gameTitle.setText(game.getTitle());
-        holder.gameDeveloper.setText(game.getDeveloper());
         holder.gameGenre.setText(game.getGenre());
-        holder.gameReleaseDate.setText(game.getReleaseDate());
         holder.gamePrice.setText("$" + game.getPrice());
         holder.gameImage.setImageResource(game.getImage());
     }
@@ -58,9 +56,7 @@ public class GameStoreAdapter extends RecyclerView.Adapter<GameStoreAdapter.View
             super(itemView);
             gameImage = itemView.findViewById(R.id.game_image);
             gameTitle = itemView.findViewById(R.id.game_title);
-            gameDeveloper = itemView.findViewById(R.id.game_developer);
             gameGenre = itemView.findViewById(R.id.game_genre);
-            gameReleaseDate = itemView.findViewById(R.id.game_release_date);
             gamePrice = itemView.findViewById(R.id.game_price);
         }
     }

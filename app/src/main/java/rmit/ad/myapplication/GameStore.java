@@ -23,7 +23,9 @@ public class GameStore extends Fragment {
         gameList.setLayoutManager(new LinearLayoutManager(getContext()));
 
         List<Game> games = new ArrayList<>();
-        // populate the games list with data
+        games.add(new Game("Red Dead Redemption 2", "Rockstar", "Action-Adventure", "2018", 59.99,R.drawable.rdr2));
+        games.add(new Game("Forza Horizon 5", "XBox Game Studio", "Racing", "2021", 59.99, R.drawable.fh5));
+        games.add(new Game("Dead by Daylight", "Behavior Interactive", "Survival horror", "2016", 19.99, R.drawable.dbd));
 
         GameStoreAdapter adapter = new GameStoreAdapter(games, getContext());
         gameList.setAdapter(adapter);

@@ -34,7 +34,12 @@ public class GameLibAdapter extends RecyclerView.Adapter<GameLibAdapter.ViewHold
         Game game = games.get(position);
         holder.gameTitle.setText(game.getTitle());
         holder.gameDeveloper.setText(game.getDeveloper());
-        holder.gameImage.setImageResource(game.getImage());
+        int image = game.getImage();
+        if (image == 0) {
+            holder.gameImage.setImageResource(R.drawable.error);
+        } else {
+            holder.gameImage.setImageResource(image);
+        }
     }
 
     @Override

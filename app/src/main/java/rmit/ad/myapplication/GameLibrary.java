@@ -24,7 +24,10 @@ public class GameLibrary extends Fragment {
 
         List<Game> games = new ArrayList<>();
         // populate the games list with data
-        games.add(new Game("Grand Theft Auto V", "Rockstar"));
+        games.add(new Game("Grand Theft Auto V", "Rockstar", R.drawable.gtav));
+        games.add(new Game("Resident Evil 2", "Capcom", R.drawable.re2));
+        games.add(new Game("Back 4 Blood", "Turtle Rock Studio", R.drawable.b4b));
+
 
         GameLibAdapter adapter = new GameLibAdapter(games, getContext());
         gameList.setAdapter(adapter);

@@ -27,28 +27,12 @@
             android:text="Title of the game" />
 
         <TextView
-            android:id="@+id/game_developer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:textColor="#000"
-            android:text="Developer name" />
-
-        <TextView
             android:id="@+id/game_genre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="14sp"
             android:textColor="#000"
             android:text="Game genre" />
-
-        <TextView
-            android:id="@+id/game_release_date"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:textColor="#000"
-            android:text="Release date" />
 
         <TextView
             android:id="@+id/game_price"

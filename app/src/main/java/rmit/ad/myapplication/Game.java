@@ -8,13 +8,13 @@ public class Game {
     private double price;
     private int image;
 
-    public Game(String title, String developer) {
+    public Game(String title, String developer, int image) {
         this.title = title;
         this.developer = developer;
         this.genre = "";
         this.releaseDate = "";
         this.price = 0;
-        this.image = 0;
+        this.image = image;
     }
 
     public Game(String title, String developer, String genre, String releaseDate, double price, int image) {

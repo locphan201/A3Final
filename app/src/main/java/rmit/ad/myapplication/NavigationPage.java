@@ -50,13 +50,13 @@ public class NavigationPage extends AppCompatActivity {
                         loadFragment(new GameStore());
                         break;
                     case R.id.nav_item3:
-//                        loadFragment(new Fragment());
+                        loadFragment(new Fragment());
                         break;
                     case R.id.nav_item4:
                         loadFragment(new UserProfile());
                         break;
                     case R.id.nav_item5:
-//                        loadFragment(new Fragment());
+                        loadFragment(new HelpAndSupport());
                         break;
                     case R.id.nav_item6:
                         setResult(RESULT_OK);
@@ -78,9 +78,24 @@ public class NavigationPage extends AppCompatActivity {
             getSupportActionBar().setTitle(R.string.app_name_fragment1);
         }
 
+        // Fragment 2
+        else if (fragment instanceof GameStore) {
+            getSupportActionBar().setTitle(R.string.app_name_fragment2);
+        }
+
+//        // Fragment 3
+//        else if (fragment instanceof Fragment) {
+//            getSupportActionBar().setTitle(R.string.app_name_fragment3);
+//        }
+
         // Fragment 4
-        if (fragment instanceof UserProfile) {
+        else if (fragment instanceof UserProfile) {
             getSupportActionBar().setTitle(R.string.app_name_fragment4);
+        }
+
+        // Fragment 5
+        else if (fragment instanceof HelpAndSupport) {
+            getSupportActionBar().setTitle(R.string.app_name_fragment5);
         }
     }
 
