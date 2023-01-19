@@ -1,11 +1,14 @@
 package rmit.ad.myapplication;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -36,6 +39,28 @@ public class GameStoreAdapter extends RecyclerView.Adapter<GameStoreAdapter.View
         holder.gameGenre.setText(game.getGenre());
         holder.gamePrice.setText("$" + game.getPrice());
         holder.gameImage.setImageResource(game.getImage());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+                builder.setTitle(game.getTitle());
+                builder.setMessage("Do you want to purchase this game?");
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(view.getContext(), "The game has been added to your library!", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
     }
 
     @Override
@@ -47,9 +72,7 @@ public class GameStoreAdapter extends RecyclerView.Adapter<GameStoreAdapter.View
 
         ImageView gameImage;
         TextView gameTitle;
-        TextView gameDeveloper;
         TextView gameGenre;
-        TextView gameReleaseDate;
         TextView gamePrice;
 
         public ViewHolder(@NonNull View itemView) {

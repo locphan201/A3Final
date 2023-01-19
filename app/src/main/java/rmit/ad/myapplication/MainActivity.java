@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             if (requestCode == 300) {
-                Toast.makeText(this, "Logout!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Successfully Logout!", Toast.LENGTH_SHORT).show();
             }
         }
 
